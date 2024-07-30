@@ -1,0 +1,33 @@
+# Invoice Similarity Matching System
+
+## Objective
+This system automatically categorizes incoming invoices by matching them to existing templates or previously processed invoices based on content and structural similarity.
+
+## Approach
+
+### Document Representation
+- **Text Extraction**: Uses PyPDF2 to extract text from PDF invoices.
+- **Feature Extraction**: Extracts features such as invoice number, date, and amount using regular expressions.
+
+### Similarity Metric
+- **Cosine Similarity**: Measures the similarity between text documents using TF-IDF vectors.
+
+## Instructions
+
+### Setup
+1. **Install Dependencies**:
+   ```bash
+   pip install PyPDF2 scikit-learn
+
+2. Prepare Data:
+
+Place your test invoices in the test folder.
+Place your train invoices in the train folder.
+
+3.Run the Script:
+
+python app.py
+
+4.View Results:
+
+The script will print the most similar train invoice and the similarity score for each test invoice.
